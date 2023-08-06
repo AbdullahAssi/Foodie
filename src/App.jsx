@@ -5,7 +5,7 @@ import Layout from './Layout/Layout'
 import Hero from './components/hero'
 import Promo from './components/Promo'
 import Shop from "./components/Shop"
-// import Features from "./components/Features"
+import Features from "./components/Features"
 
 function App() {
 
@@ -22,6 +22,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       <Promo />
+      <Features />
     </>
   )
 }
