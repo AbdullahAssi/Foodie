@@ -1,0 +1,37 @@
+
+.feature-container{
+    display: flex;
+    max-width: 1280px;
+    gap: 20px;
+    padding: 1rem;
+}
+.feature-heading{
+    color: black;
+}
+
+span{
+    color: #ffa43e;
+}
+.feature-info{
+    margin-top: 1rem;
+}
+.feature-button{
+    margin-top: 1rem;
+    border: #ffa43e 1px solid;
+    outline: none;
+}
+.feature-info{
+    color: rgb(44, 45, 45);
+    font-family: Roboto
+    , sans-serif;
+}
+h5{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+@media (max-width:768px) {
+    .feature-container{
+        flex-direction: column;
+    }    
+}
