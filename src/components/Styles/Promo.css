@@ -3,8 +3,8 @@
     justify-self: center;
     align-items: center;
 } */
-.promo-container{
-    max-width: 1000px;
+.promo-container {
+    /* max-width: 1000px; I removed this */
     background-color: rgb(249, 246, 240);
     padding-inline: 10rem;
     padding-block: 2rem;

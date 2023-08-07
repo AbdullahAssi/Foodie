@@ -1,0 +1,116 @@
+.empty-cart{
+    margin-top: 6.5rem;
+}
+.cart-nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    padding:1rem 2rem;
+}
+.cart-container{
+    margin-top: 6.5rem;
+    padding: 2rem;
+}
+.product{
+    padding-inline: 55px;
+}
+
+.cart-item-details{
+    display: flex;
+}
+.quantity-controls{
+    display: flex;
+    gap: 10px;
+}
+.qty-button{
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.cart-item-name{
+    font-family: rubik , sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+.cart-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cart-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-inline: 2rem;
+    align-items: center;
+    background-color: antiquewhite;
+    gap: 10px;
+}
+.cart-item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(255, 157, 46);
+}
+
+.sign {
+    width: 80%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+  /* hover effect on button width */
+.Btn:hover {
+    width: 100px;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+.Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+    transform: translate(2px ,2px);
+}

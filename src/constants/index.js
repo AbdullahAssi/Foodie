@@ -19,7 +19,7 @@ export const navLinks = [
     {
         id: "clients",
         title: "Stores",
-        link : './promo'
+        link : './'
     },
 ];
 
@@ -50,8 +50,7 @@ export const catagory =[
         title: "Pizza",
         icon: picon1,
         description: "Its is all about Pizza",
-        img: promo5
-
+        img: promo5,
     },
     {
         id: 4,
@@ -63,12 +62,22 @@ export const catagory =[
 ]
 export const food =[
     {
-        id:1,
+        id:0,
         Name: "Burger",
         pic : burger1,
         catagory : "Burger",
         Price : 60,
-        discount : 10
+        discount : 10,
+        O_price: 80
+    },
+    {
+        id:1,
+        Name: "Pizza",
+        pic : pizza1,
+        catagory : "Pizza",
+        Price : 60,
+        discount : 10,
+        O_price: 80
     },
     {
         id:2,
@@ -76,31 +85,35 @@ export const food =[
         pic : burger2,
         catagory : "Burger",
         Price : 50,
-        discount : 20
+        discount : 20,
+        O_price: 80
     },
     {
         id:3,
-        Name: "Burger",
-        pic : burger3,
-        catagory : "Burger",
-        Price : 20,
-        discount :5
+        Name: "Coca Cola",
+        pic : drink2,
+        catagory : "Drink",
+        Price : 25,
+        discount : 10,
+        O_price: 80
     },
     {
         id:4,
         Name: "Burger",
-        pic : burger4,
-        catagory : "Burger",
-        Price : 60,
-        discount : 10
-    },
-    {
-        id:5,
-        Name: "Burger",
         pic : burger5,
         catagory : "Burger",
         Price : 50,
-        discount : 10
+        discount : 10,
+        O_price: 80
+    },
+    {
+        id:5,
+        Name: "Sandwich",
+        pic : sandwich2,
+        catagory : "Sandwich",
+        Price : 60,
+        discount : 10,
+        O_price: 80
     },
     {
         id:6,
@@ -108,23 +121,26 @@ export const food =[
         pic : burger6,
         catagory : "Burger",
         Price : 30,
-        discount : 10
+        discount : 10,
+        O_price: 80
     },
     {
         id:7,
-        Name: "Burger",
-        pic : burger7,
-        catagory : "Burger",
-        Price : 60,
-        discount : 10
-    },
-    {
-        id:8,
         Name: "Fanta",
         pic : drink1,
         catagory : "Drink",
         Price : 60,
-        discount : 10
+        discount : 10,
+        O_price: 80
+    },
+    {
+        id:8,
+        Name: "Burger",
+        pic : burger7,
+        catagory : "Burger",
+        Price : 60,
+        discount : 10,
+        O_price: 80
     },
     {
         id:9,
@@ -132,47 +148,53 @@ export const food =[
         pic : drink4,
         catagory : "Drink",
         Price : 60,
-        discount : 10
+        discount : 10,
+        O_price: 80
     },
     {
         id:10,
-        Name: "Coca Cola",
-        pic : drink2,
-        catagory : "Drink",
-        Price : 60,
-        discount : 10
-    },
-    {
-        id:11,
         Name: "Sprite",
         pic : drink3,
         catagory : "Drink",
         Price : 60,
-        discount : 10
+        discount : 10,
+        O_price: 80
+    },
+    {
+        id:11,
+        Name: "Burger",
+        pic : burger4,
+        catagory : "Burger",
+        Price : 60,
+        discount : 10,
+        O_price: 80
     },
     {
         id:12,
         Name: "Pizza",
-        pic : pizza1,
+        pic : pizza2,
         catagory : "Pizza",
         Price : 60,
-        discount : 10
+        discount : 10,
+        O_price: 80
     },
     {
         id:13,
         Name: "Pizza",
-        pic : pizza2,
-        catagory : "Pizza",
-        Price : 60,
-        discount : 10
-    },
-    {
-        id:14,
-        Name: "Pizza",
         pic : pizza3,
         catagory : "Pizza",
         Price : 60,
-        discount : 10
+        discount : 10,
+        O_price: 80
+    },
+    {
+        id:14,
+        Name: "Burger",
+        pic : burger3,
+        catagory : "Burger",
+        Price : 20,
+        discount :5,
+        O_price: 80
     },
     {
         id:15,
@@ -180,16 +202,9 @@ export const food =[
         pic : sandwich1,
         catagory : "Sandwich",
         Price : 60,
-        discount : 10
+        discount : 10,
+        O_price: 80
     },
-    {
-        id:16,
-        Name: "Sandwich",
-        pic : sandwich2,
-        catagory : "Sandwich",
-        Price : 60,
-        discount : 10
-    },
-
-
+    
+    
 ]

@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: .7rem 2rem;
 }
 
 
@@ -23,7 +23,7 @@
 header {
     background: #f7f7f7;
     padding-inline: 1rem;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -169,4 +169,25 @@ header::after {
     display: none;
 }
 
+}
+.cart {
+    cursor: pointer;
+    position: relative;
+    padding: 3px;
+}
+
+.cart-value{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #110214;
+    border-radius:50%;
+    width: 15px;
+    height: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
 }

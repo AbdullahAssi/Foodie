@@ -54,6 +54,10 @@ import drink6 from './drink6.png'
 import sandwich1 from './sandwich1.png'
 import sandwich2 from './sandwich2.png'
 import verified from './verified.svg'
+import carticon from './cart.svg'
+import del  from  './del.svg'
+import dec from './subtract.svg'
+import inc from './add.svg'
 export {
     herobanner,herobannerbg,herobg,herobgshape,
     about_banner,
@@ -68,5 +72,5 @@ export {
     burger1,burger2,burger3,burger4,burger5,burger6,burger7,
     drink1,drink2,drink3,drink4,drink5,drink6,
     sandwich1,sandwich2,
-    verified
+    verified,carticon,del,inc,dec
 }

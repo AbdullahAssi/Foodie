@@ -2,27 +2,26 @@ import React from "react"
 import { BrowserRouter , Routes, Route } from "react-router-dom"
 import './App.css'
 import Layout from './Layout/Layout'
-import Hero from './components/hero'
-import Promo from './components/Promo'
 import Shop from "./components/Shop"
-import Features from "./components/Features"
+import Pages from "./Layout/Pages"
+import Cart from "./components/Cart"
+import { RecoilRoot } from "recoil"
 
 function App() {
 
   return (
     <>
-        <BrowserRouter>
-          <Routes>
-            <Route  element={<Layout/>} >
-              <Route path='/' element={<Hero />}/>
-              <Route path='/shop' element={<Shop />}/>
-            </Route>
-
-            
-          </Routes>
-        </BrowserRouter>
-      <Promo />
-      <Features />
+    <RecoilRoot>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Pages />} />
+            <Route path='shop' element={<Shop />} />
+            <Route path='cart' element={<Cart />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      </RecoilRoot>
     </>
   )
 }

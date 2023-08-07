@@ -3,13 +3,13 @@ h6{
     color: #ff8d29;
     font-size: 2.5rem;
 }
-h1{
+.hero-heading{
     font-family: Rubik , sans-serif;
     color: #f1d6c6;
     font-size: 4rem;
     margin-bottom: 1.2rem;
 }
-p{
+.hero-discription{
     font-family: Roboto, sans-serif;
     color: white;
     margin-bottom: 1rem;
@@ -22,6 +22,7 @@ p{
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    margin-top: 4.5rem;
 }
 
 

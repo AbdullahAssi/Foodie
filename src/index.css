@@ -15,6 +15,7 @@
     font-size: 19px;
     color: black;
     z-index: 1;
+    outline: 1px solid black;
 }
    
 .button:before {
