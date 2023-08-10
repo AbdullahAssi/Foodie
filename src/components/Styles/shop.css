@@ -73,6 +73,7 @@
 .original-price{
     text-decoration: line-through;
     font-size: 14px;
+    color: #ff9d2e;
 }
 
 .shop-button{

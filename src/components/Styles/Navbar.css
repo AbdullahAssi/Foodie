@@ -1,6 +1,5 @@
 :root{
     --main-color: #f1d6c6;
-
 }
 
 .nav-container{
@@ -22,6 +21,7 @@
 
 header {
     background: #f7f7f7;
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.2);
     padding-inline: 1rem;
     position: fixed;
     top: 0;
@@ -53,7 +53,6 @@ header::after {
 
 .site-nav--open {
     clip-path: circle(250% at top right);
-/*   display: block; */
 }
 
 .site-nav ul {

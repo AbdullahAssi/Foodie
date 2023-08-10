@@ -58,6 +58,7 @@ import carticon from './cart.svg'
 import del  from  './del.svg'
 import dec from './subtract.svg'
 import inc from './add.svg'
+import emptycart from './emptycart.gif'
 export {
     herobanner,herobannerbg,herobg,herobgshape,
     about_banner,
@@ -72,5 +73,5 @@ export {
     burger1,burger2,burger3,burger4,burger5,burger6,burger7,
     drink1,drink2,drink3,drink4,drink5,drink6,
     sandwich1,sandwich2,
-    verified,carticon,del,inc,dec
+    verified,carticon,del,inc,dec, emptycart
 }

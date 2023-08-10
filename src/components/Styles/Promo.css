@@ -1,10 +1,5 @@
-/* .promo{
-    display: flex;
-    justify-self: center;
-    align-items: center;
-} */
+
 .promo-container {
-    /* max-width: 1000px; I removed this */
     background-color: rgb(249, 246, 240);
     padding-inline: 10rem;
     padding-block: 2rem;
@@ -54,26 +49,27 @@
     }
 }
 
-::-webkit-scrollbar {
+.list::-webkit-scrollbar {
     height: 15px;
+    z-index: 1;
 }
-::-webkit-scrollbar {
+.list::-webkit-scrollbar {
     width: 8px;
 }
-::-webkit-scrollbar-button {
+.list::-webkit-scrollbar-button {
     width: calc(25% - 40px);
 }
-::-webkit-scrollbar-thumb {
+.list::-webkit-scrollbar-thumb {
     border: 3px solid hsl(0, 0%, 93%);
     border-radius: 50px;
 }
-::-webkit-scrollbar-thumb {
+.list::-webkit-scrollbar-thumb {
     background-color: hsl(32, 100%, 59%);
 }
-::-webkit-scrollbar-track {
+.list::-webkit-scrollbar-track {
     border: 2px solid  hsl(32, 100%, 59%);
     border-radius: 50px;
 }
-::-webkit-scrollbar-track {
+.list::-webkit-scrollbar-track {
     background-color: hsl(0, 0%, 93%);
 }

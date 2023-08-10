@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+body::-webkit-scrollbar{
+    display: none;
+}
 
 .button {
     display: inline-block;
@@ -65,3 +67,4 @@
     background-color: #f39a3c;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
+
