@@ -68,7 +68,8 @@ export const food =[
         catagory : "Burger",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:1,
@@ -77,7 +78,8 @@ export const food =[
         catagory : "Pizza",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:2,
@@ -86,7 +88,8 @@ export const food =[
         catagory : "Burger",
         Price : 50,
         discount : 20,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:3,
@@ -95,7 +98,8 @@ export const food =[
         catagory : "Drink",
         Price : 25,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:4,
@@ -104,7 +108,8 @@ export const food =[
         catagory : "Burger",
         Price : 50,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:5,
@@ -113,7 +118,8 @@ export const food =[
         catagory : "Sandwich",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:6,
@@ -122,7 +128,8 @@ export const food =[
         catagory : "Burger",
         Price : 30,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:7,
@@ -131,7 +138,8 @@ export const food =[
         catagory : "Drink",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:8,
@@ -140,7 +148,8 @@ export const food =[
         catagory : "Burger",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:9,
@@ -149,7 +158,8 @@ export const food =[
         catagory : "Drink",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:10,
@@ -158,7 +168,8 @@ export const food =[
         catagory : "Drink",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:11,
@@ -167,7 +178,8 @@ export const food =[
         catagory : "Burger",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:12,
@@ -176,7 +188,8 @@ export const food =[
         catagory : "Pizza",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:13,
@@ -185,7 +198,8 @@ export const food =[
         catagory : "Pizza",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:14,
@@ -194,7 +208,8 @@ export const food =[
         catagory : "Burger",
         Price : 20,
         discount :5,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     {
         id:15,
@@ -203,7 +218,8 @@ export const food =[
         catagory : "Sandwich",
         Price : 60,
         discount : 10,
-        O_price: 80
+        O_price: 80,
+        clicked: false
     },
     
     

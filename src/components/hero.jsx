@@ -1,5 +1,5 @@
 import React from 'react'
-import { herobg,herobanner,herobannerbg } from '../assets'
+import { herobg,herobannerbg, burger6 } from '../assets'
 
 import './Styles/Hero.css'
 function Hero() {
@@ -23,8 +23,8 @@ function Hero() {
                 <p className='hero-discription'>Food is any substance consumed to provide nutritional support for an organism.</p>
                 <button className='button'>Order Now</button>
             </div>
-            <div className='burger' style={burgerstyle}>
-                <img src={herobanner} width={550} />
+            <div  className='burger' style={burgerstyle}>
+                <img  src={burger6} width={550} />
                 
             </div>
         </div>

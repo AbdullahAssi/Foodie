@@ -33,7 +33,6 @@
     align-items: center;
     justify-content: center;
     padding-inline: 2rem;
-    /* I added a gap */
     gap: 1rem;
 }
 .item-card {
@@ -41,18 +40,21 @@
     box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2);
     padding: 1rem;
     border-radius: 10px;
+    position: relative;
 }
 .item-pic {
+    margin-top: 1rem;
     display: block;
     max-width: 100%;
     width: 200px;
     height: 250px;
     object-fit: contain;
-    /* filter: drop-shadow(1px 3px 2px black); */
 }
 .item-discount{
+    position: absolute;
+    top: 5;
+    right:0;
     padding: .5rem;
-    width: 15%;
     border-radius: 2px;
     background-color: rgb(244, 47, 37);
 }
@@ -137,4 +139,33 @@
 
 .cart-button:active {
     filter: brightness(.8);
+}
+
+@media  ( max-width :768px){
+    .shop-container>h1{
+        padding-left: .6rem;
+    }
+    .shop-container{
+        padding-inline: .1rem;
+    }
+    .item-container{
+        padding-inline: .1rem;
+        gap: .8rem;
+    }
+    .item-info{
+        font-size: 14px;
+    }
+    .price{
+        font-size: 12px;
+    }
+    .original-price{
+        font-size: 10px;
+    }
+    .item-pic{
+        width: 110px;
+        height: 150px;
+    }
+    .cart-button{
+        font-size: 10px;
+    }
 }

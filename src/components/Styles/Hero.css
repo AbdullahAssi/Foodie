@@ -17,6 +17,7 @@ h6{
 .hero-info{
     gap: 35px;
 }
+
 .hero-container{
     display: flex;
     align-items: center;

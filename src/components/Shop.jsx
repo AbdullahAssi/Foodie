@@ -2,9 +2,8 @@ import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { food } from '../constants';
 import './Styles/shop.css';
-import { carticon } from '../assets';
 import { atom, useRecoilState , selector } from 'recoil';
-
+import { BsFillCartPlusFill, BsCartCheckFill } from 'react-icons/bs'
 
 export const CartState = atom({
     key: "CartState",
@@ -20,16 +19,30 @@ export const cartStateWithRemove = selector({
 });
 
 export function addToCart(item, cart, setCart) {
-    const updatedCart = { ...cart, [item.id]: (cart[item.id] || 0) + 1 };
-    setCart(updatedCart);
+    if (cart[item.id]) {
+        const updatedCart = { ...cart };
+        const itemCount = updatedCart[item.id];
+        
+        if (itemCount > 1) {
+            updatedCart[item.id] = itemCount - 1;
+        } else {
+            delete updatedCart[item.id]; 
+        }
+        
+        setCart(updatedCart);
+    } else {
+        const updatedCart = { ...cart, [item.id]: 1 };
+        setCart(updatedCart);
+    }
 }
+
+
 
 function Shop() {
     const [cart , setCart] = useRecoilState(CartState);
     const [visible, setVisible] = React.useState(8);
     const [searchParams, setSearchParams] = useSearchParams();
     const [items, setItems] = React.useState([]);
-
     console.log(Object.keys(cart).length);
 
     if(!cart) {
@@ -47,6 +60,22 @@ function Shop() {
         setVisible(prevState => prevState + 4);
     };
 
+
+    const toggleClicked = (item) => {
+        setItems((prevItems) =>
+            prevItems.map((prevItem) =>
+                prevItem.id === item.id ? { ...prevItem, clicked: !prevItem.clicked } : prevItem
+            )
+        );
+    };
+
+    const remainingItems = displayedItems.length - visible;
+    const showMoreButton = remainingItems > 0 && (
+        <div className='shop-button'>
+            <button className='button' onClick={showMoreItems}>Explore More</button>
+        </div>
+    );
+
     const ItemsElements = displayedItems.slice(0, visible).map((item) => (
         <div className='item-card' key={item.id}>
             <div className='item-discount'>-{item.discount}%</div>
@@ -59,53 +88,63 @@ function Shop() {
             <button className='cart-button'
                 onClick={() => {
                     addToCart(item, cart, setCart);
+                    toggleClicked(item);
                 }}
-                >Add to Cart <img src={carticon} width="20px" /></button>
+                >{item.clicked ? (
+                    <>
+                        Added to Cart <BsCartCheckFill />
+                    </>
+                ) : (
+                    <>
+                        Add to Cart <BsFillCartPlusFill />
+                    </>
+                )}
+                </button>
         </div>
         </div>
     ));
 
     return (
         <div className='shop-container'>
-        <h1>Explore Our Items</h1>
+            <h1>Explore Our Items</h1>
 
-        <nav className='filter-nav'>
-            <Link className='item-type' to='.'>All</Link>
-            <Link
-                className={`item-type pizza ${typeFilter === 'Pizza' ? 'selected' : ''}`}
-                to='?catagory=Pizza'
-            >
-            Pizza
-            </Link>
+            <nav className='filter-nav'>
+                <Link className='item-type' to='.'>All</Link>
 
-            <Link
-                className={`item-type pizza ${typeFilter === 'Drink' ? 'selected' : ''}`}
-                to='?catagory=Drink'
-            >
-            Drink
-            </Link>
+                <Link
+                    className={`item-type pizza ${typeFilter === 'Pizza' ? 'selected' : ''}`}
+                    to='?catagory=Pizza'
+                >
+                    Pizza
+                </Link>
 
-            <Link
-                className={`item-type burger ${typeFilter === 'Burger' ? 'selected' : ''}`}
-                to='?catagory=Burger'
-            >
-            Burger
-            </Link>
+                <Link
+                    className={`item-type pizza ${typeFilter === 'Drink' ? 'selected' : ''}`}
+                    to='?catagory=Drink'
+                >
+                    Drink
+                </Link>
 
-            <Link
-                className={`item-type sandwich ${typeFilter === 'Sandwich' ? 'selected' : ''}`}
-                to='?catagory=Sandwich'
-            >
-            Sandwich
-            </Link>
+                <Link
+                    className={`item-type burger ${typeFilter === 'Burger' ? 'selected' : ''}`}
+                    to='?catagory=Burger'
+                >
+                    Burger
+                </Link>
 
-        </nav>
+                <Link
+                    className={`item-type sandwich ${typeFilter === 'Sandwich' ? 'selected' : ''}`}
+                    to='?catagory=Sandwich'
+                >
+                    Sandwich
+                </Link>
 
-        <div className='item-container'>{ItemsElements}
-        </div>
-        <div className='shop-button'>
-            <button className='button' onClick={showMoreItems}>Explore More</button>
-        </div>
+            </nav>
+
+            <div className='item-container'>
+                {ItemsElements}
+            </div>
+            {showMoreButton}
         </div>
     );
 }
