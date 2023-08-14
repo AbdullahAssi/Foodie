@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useAuth } from "../config/Context";
 import * as yup from "yup";
 import '../index.css'
 import { Link } from "react-router-dom";
@@ -9,8 +10,6 @@ import { MdAlternateEmail } from 'react-icons/md';
 import { BiSolidLockAlt } from 'react-icons/bi';
 import { GoAlertFill,GoVerified } from 'react-icons/go';
 import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineUser } from 'react-icons/ai';
-import { createUserWithEmailAndPassword , signInWithPopup } from "firebase/auth";
-import { auth, googleprovider } from "../config/Firebase";
 
 const schema = yup.object({
     firstName: yup.string().required(),
@@ -25,41 +24,16 @@ export default function Test() {
     });
 
     const [visible , setVisible] = useState(false);
-    const [popup , setPopup] = useState(false);
-    const [userName, setUserName] = useState('');
+    const { handleSignUp, popup, handleSignInWithGoogle,user } = useAuth();
 
     const handleVisibility = () =>{
         setVisible(prevStat => !prevStat)
     }
-    const handleSignIn = async (data) => {
-        try {
-            const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password); 
-            
-            console.log("Account Created!");
-            console.log("Form data:", data);
-            setUserName(data.firstName)
-            setPopup(true);
-            setTimeout(() => {
-                setPopup(false)
-            }, 5000);
-            // await createUserDocument(userCredential, data.firstName, data.lastName);    
-        } catch (error) {
-            console.log(error.message);
-        }
-    }
     
-
-    const signInwGoogle = async () =>{
-        try{
-            await signInWithPopup (auth , googleprovider)
-        }catch (err) {
-            console.error(err);
-        }
-    }
     
     return (
         <div className="Form-container">
-        <form className="form" onSubmit={handleSubmit(handleSignIn)}>
+        <form className="form" onSubmit={handleSubmit(handleSignUp)}>
             <div className="flex-column">
                 <label>First Name </label>
             </div>
@@ -135,7 +109,7 @@ export default function Test() {
             <p className="p line">Or</p>
 
             <div className="flex-row">
-                <button className="btn google" onClick={signInwGoogle}>
+                <button className="btn google" onClick={handleSignInWithGoogle}>
                 <FcGoogle /> Sign In with Google 
                 </button>
             </div>
@@ -143,7 +117,7 @@ export default function Test() {
         </form>
             {popup && (
                 <div className="popup">
-                    <GoVerified /> <p> Welcome, {userName}! You have successfully signed up</p>
+                    <GoVerified /> <p> Welcome {user}! You have successfully signed up</p>
                 </div>
             )}
         </div>

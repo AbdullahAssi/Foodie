@@ -7,13 +7,13 @@ import { getStorage } from 'firebase/storage'
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDlWazL0QKNWE2dgWxhVhlmLLbgStWGvQM",
-    authDomain: "foodie-e57b3.firebaseapp.com",
-    projectId: "foodie-e57b3",
-    storageBucket: "foodie-e57b3.appspot.com",
-    messagingSenderId: "294368293510",
-    appId: "1:294368293510:web:3fdb9284442f82ff209707",
-    measurementId: "G-XZKY4S1DZZ"
+    apiKey: "AIzaSyDno8nVDXc68OOTa5JBw9bRnlzSUvcbN3I",
+    authDomain: "foodie-510ba.firebaseapp.com",
+    projectId: "foodie-510ba",
+    storageBucket: "foodie-510ba.appspot.com",
+    messagingSenderId: "519063403644",
+    appId: "1:519063403644:web:3f332885141a230d54ddf9",
+    measurementId: "G-EMTF7NMQKC"
 };
 
 const app = initializeApp(firebaseConfig);

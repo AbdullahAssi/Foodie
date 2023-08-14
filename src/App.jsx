@@ -7,29 +7,17 @@ import Pages from "./Layout/Pages";
 import { RecoilRoot } from "recoil";
 import Test from "./components/test";
 import Login from "./components/Login";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { AuthProvider, useAuth } from "./config/Context";
 
 function PrivateRoute({ element, ...rest }) {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-      const auth = getAuth();
-      const unsubscribe = onAuthStateChanged(auth, (user) => {
-          console.log("Auth State Changed:", user);
-          setUser(user);
-      });
-
-      return () => unsubscribe();
-  }, []);
-
-  console.log("User:", user); 
+  const { user } = useAuth();
 
   if (!user) {
-      console.log("User not authenticated, redirecting..."); 
-      return <Navigate to="/login" />;
+    console.log("User not authenticated, redirecting...");
+    return <Navigate to="/login" />;
   }
 
-  console.log("User authenticated, rendering element..."); 
+  console.log("User authenticated, rendering element...");
 
   return element;
 }
@@ -38,6 +26,7 @@ function App() {
     return (
         <>
             <RecoilRoot>
+              <AuthProvider>
                 <BrowserRouter>
                     <Routes>
                         <Route path='test' element={<Test />} />
@@ -49,6 +38,7 @@ function App() {
                       </Route>
                     </Routes>
                 </BrowserRouter>
+              </AuthProvider>
             </RecoilRoot>
         </>
     );

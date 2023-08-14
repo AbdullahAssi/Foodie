@@ -9,8 +9,7 @@ import { MdAlternateEmail } from 'react-icons/md';
 import { BiSolidLockAlt } from 'react-icons/bi';
 import { GoAlertFill,GoVerified } from 'react-icons/go';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { auth , googleprovider } from "../config/Firebase";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { useAuth } from "../config/Context";
 
 const schema = yup.object({
     email: yup.string().required(),
@@ -23,38 +22,17 @@ export default function Login() {
     });
 
     const [visible , setVisible] = useState(false);
-    const [popup , setPopup] = useState(false);
+    const { handleSignInWithEmailAndPassword, handleSignInWithGoogle, popup } = useAuth();
 
     const handleVisibility = () =>{
         setVisible(prevStat => !prevStat)
     }
 
-    const handleLogin = async (data) => {
-        try{
-            await signInWithEmailAndPassword (auth,data.email , data.password);
-            console.log("logged in succcessgully")
-            setPopup(true);
-            setTimeout(() => {
-                setPopup(false)
-            }, 5000);
-        }
-        catch(err){
-            console.log(err.message)
-        }
-    }
 
-
-    const signInwGoogle = async () => {
-        try {
-            await signInWithPopup(auth, googleprovider);
-        } catch (err) {
-            console.error(err);
-        }
-    };
 
     return (
         <div className="Form-container" id="login-container">
-        <form className="form" id="login-form" onSubmit={handleSubmit(handleLogin)}>
+        <form className="form" id="login-form" onSubmit={handleSubmit(handleSignInWithEmailAndPassword)}>
             
 
             <div className="flex-column">
@@ -103,7 +81,7 @@ export default function Login() {
             <p className="p line">Or</p>
 
             <div className="flex-row">
-                <button className="btn google" onClick={signInwGoogle}>
+                <button className="btn google" onClick={handleSignInWithGoogle}>
                     <FcGoogle />Sign In with Google 
                 </button>
             </div>
