@@ -1,0 +1,89 @@
+
+.deals-container{
+    padding: .4rem;
+}
+.banner { color: white; }
+
+.banner-list {
+    display: grid;
+    gap: 10px;
+}
+
+.banner-lg { height: 430px; }
+
+.banner-sm { height: 200px; }
+
+.banner-md { height: 240px; }
+
+.banner-card {
+    position: relative;
+    height: 100%;
+    box-shadow: var(--shadow-2);
+    overflow: hidden;
+}
+
+.banner-card .banner-img {
+    background-color:  hsl(0, 0%, 87%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+
+.banner-card:is(:hover, :focus-within) .banner-img { transform: scale(1.05); }
+
+.banner-item-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    right: 20px;
+    max-height: calc(100% - 30px);
+}
+
+.banner-md .banner-item-content { left: 50%; }
+
+.banner-subtitle,
+.banner-title {
+    font-family:'Rubik', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.banner-lg .banner-subtitle {
+    font-size:  2.2rem;
+    margin-block-end: 10px;
+    }
+
+.banner-lg .banner-title {
+    font-size:  2.2rem;
+    max-width: 16ch;
+}
+
+:is(.banner-md, .banner-sm) .banner-title {
+    font-size: 2.2rem;
+    max-width: 10ch;
+}
+
+.banner-card .banner-text { margin-block: 10px 15px; }
+
+@media (min-width: 768px) {
+    .deals-container{
+        padding: 2rem;
+    }
+    
+    .banner-list { grid-template-columns: repeat(4, 1fr); }
+
+    .banner-lg {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+
+    .banner-md {
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+        height: 220px;
+    }
+}

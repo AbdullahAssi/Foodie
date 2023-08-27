@@ -217,6 +217,12 @@ body::-webkit-scrollbar{
       transform: translate(-50%, -50%); /* Final position centered on the screen */
     }
   }
+.credit{
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: #f69c3c;
+}
 
   @media (max-width: 768px){
     .Form-container{

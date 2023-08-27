@@ -31,7 +31,6 @@ function App() {
                     <Routes>
                         <Route path='test' element={<Test />} />
                         <Route path='login' element={<Login />} />
-
                         <Route path="/" element={<Layout />}>
                           <Route index element={<Pages />} />
                           <Route path="shop" element={<PrivateRoute element={<Shop />} />} />

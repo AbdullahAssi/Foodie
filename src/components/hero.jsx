@@ -25,7 +25,6 @@ function Hero() {
             </div>
             <div  className='burger' style={burgerstyle}>
                 <img  src={burger6} width={550} />
-                
             </div>
         </div>
     )

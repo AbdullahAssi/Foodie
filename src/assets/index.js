@@ -59,7 +59,9 @@ import del  from  './del.svg'
 import dec from './subtract.svg'
 import inc from './add.svg'
 import emptycart from './emptycart.gif'
+import deliveryboy from './delivery-boy.svg'
 export {
+    deliveryboy,
     herobanner,herobannerbg,herobg,herobgshape,
     about_banner,
     avatar1, avatar2,avatar3,
