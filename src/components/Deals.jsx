@@ -11,7 +11,7 @@ function Deals() {
                 <div className="banner-card">
 
                     <img src={banner1} width="550" height="450" loading="lazy"
-                        alt="Discount For Delicious Tasty Burgers!" className="banner-img" />
+                        alt="Discount For Delicious Tasty Burgers!" className="deal-img" />
                     <div className="banner-item-content">
                         <p className="banner-subtitle">50% Off Now!</p>
                         <h3 className="banner-title">Discount For Delicious Tasty Burgers!</h3>
@@ -26,7 +26,7 @@ function Deals() {
                 <div className="banner-card">
 
                     <img src={banner2} width="550" height="465" loading="lazy" alt="Delicious Pizza"
-                    className="banner-img" />
+                    className="deal-img" />
 
                         <div className="banner-item-content">
                         <h3 className="banner-title">Delicious Pizza</h3>
@@ -40,7 +40,7 @@ function Deals() {
                 <div className="banner-card">
 
                     <img src={banner3} width="550" height="465" loading="lazy" alt="American Burgers"
-                    className="banner-img" />
+                    className="deal-img" />
 
                     <div className="banner-item-content">
                         <h3 className="banner-title">American Burgers</h3>
@@ -55,7 +55,7 @@ function Deals() {
                 <div className="banner-card">
 
                 <img src={banner4} width="550" height="220" loading="lazy" alt="Tasty Buzzed Pizza"
-                    className="banner-img" />
+                    className="deal-img" />
 
                 <div className="banner-item-content">
                     <h3 className="banner-title">Tasty Buzzed Pizza</h3>

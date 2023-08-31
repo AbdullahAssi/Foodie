@@ -14,10 +14,10 @@ function Footer() {
                     <h2  className="logo">Foodie.</h2>
                     <p>Financial experts support or help you to to find out which way you can raise your funds more.</p>
                     <div className='icons'>
-                        <h1><FaFacebookSquare /></h1>
-                        <h1><FaInstagram /></h1>
-                        <h1><FaTwitter /></h1>
-                        <h1><FaPinterest /></h1>
+                        <h2><FaFacebookSquare /></h2>
+                        <h2><FaInstagram /></h2>
+                        <h2><FaTwitter /></h2>
+                        <h2><FaPinterest /></h2>
                     </div>
                 </div>
 

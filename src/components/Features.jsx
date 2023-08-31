@@ -6,12 +6,11 @@ function Features() {
 
 
     return (
-        <div>
             <div className='feature-container'>
-            <div className='container-img'>
-                <img src={about_banner} className='banner-img' />
-                <img src={shapered} className='sale-icon' />
-            </div>
+                <div className='container-img'>
+                    <img src={about_banner} className='banner-img' />
+                    <img src={shapered} className='sale-icon' />
+                </div>
 
                 <div className='feature-info'>
                     <h1 className='feature-heading'>Caferio, Burgers, and Best Pizzas <span id='span'>in Town!</span></h1>
@@ -25,7 +24,6 @@ function Features() {
                     <button className='button feature-button'>Order Now</button>
                 </div>
             </div>
-        </div>
     )
 }
 
