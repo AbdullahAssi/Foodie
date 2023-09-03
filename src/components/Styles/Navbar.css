@@ -40,6 +40,7 @@ header::after {
     color: rgb(0, 0, 0);
     font-size: 2rem;
     font-weight: 800;
+    font-family: 'Oxanium', cursive;
 }
 
 .site-nav {

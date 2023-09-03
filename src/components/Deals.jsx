@@ -14,7 +14,7 @@ function Deals() {
                         alt="Discount For Delicious Tasty Burgers!" className="deal-img" />
                     <div className="banner-item-content">
                         <p className="banner-subtitle">50% Off Now!</p>
-                        <h3 className="banner-title">Discount For Delicious Tasty Burgers!</h3>
+                        <h3 className="banner-title">Discount For Delicious Tastes!</h3>
                         <p className="banner-text">Sale off 50% only this week</p>
                         <button className="button">Order Now</button>
                     </div>
@@ -58,9 +58,9 @@ function Deals() {
                     className="deal-img" />
 
                 <div className="banner-item-content">
-                    <h3 className="banner-title">Tasty Buzzed Pizza</h3>
+                    <h3 className="banner-title">Buzzed Pizza</h3>
                     <p className="banner-text">Sale off 50% only this week</p>
-                    <button className="button">Order Now</button>
+                    <button className="button">Explore</button>
                 </div>
 
                 </div>

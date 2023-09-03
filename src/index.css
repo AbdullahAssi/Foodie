@@ -76,6 +76,7 @@ body::-webkit-scrollbar{
 }
 
 .Form-container{
+  margin-top: 5rem;
   height: auto;
   padding: 1rem;
   display: flex;

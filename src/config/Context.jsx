@@ -11,24 +11,10 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [popup, setPopup] = useState(false);
-
-    const handleSignInWithEmailAndPassword = async (email, password) => {
+    
+    const handleSignInWithGoogle = async () => {
         try {
-            await signInWithEmailAndPassword(auth, email, password);
-            console.log("logged in successfully");
-            setPopup(true);
-            setTimeout(() => {
-                setPopup(false);
-            }, 5000);
-        }
-        catch (err) {
-            console.log(err.message);
-        }
-    };
-
-const handleSignInWithGoogle = async () => {
-    try {
-        await signInWithPopup(auth, googleprovider);
+            await signInWithPopup(auth, googleprovider);
     } catch (err) {
         console.error(err);
     }
@@ -48,13 +34,27 @@ const handleSignInWithGoogle = async () => {
     }
 };
 
+const handleSignInWithEmailAndPassword = async (email, password) => {
+    try {
+        await signInWithEmailAndPassword(auth, email, password);
+        console.log("logged in successfully");
+        setPopup(true);
+        setTimeout(() => {
+            setPopup(false);
+        }, 5000);
+    }
+    catch (err) {
+        console.error("Error signing in:", err);
+    }
+};
+
 useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
         console.log("Auth State Changed:", user);
         setUser(user);
     });
 
-    return () => unsubscribe();
+    return () => unsubscribe(); 
 }, []);
 
     const contextValue = {

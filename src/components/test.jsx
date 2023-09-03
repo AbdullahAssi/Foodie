@@ -117,7 +117,7 @@ export default function Test() {
         </form>
             {popup && (
                 <div className="popup">
-                    <GoVerified /> <p> Welcome {user}! You have successfully signed up</p>
+                    <GoVerified /> <p> Welcome! You have successfully signed up</p>
                 </div>
             )}
         </div>

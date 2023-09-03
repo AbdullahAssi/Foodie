@@ -26,10 +26,9 @@
 .icons>h2{
     background-color: #ff8d29;
     border-radius: 2px;
-    z-index: -1;
     padding: .5rem;
 }
-.icons > h2:hover {
+.icons>h2:hover {
     cursor: pointer;
     background-color: black;
 }
@@ -48,17 +47,7 @@
     height: 10px;
     background-color: rgb(197, 196, 204);
 }
-.cycle{
-    position: absolute;
-    top: 0;
-    margin-top: -4rem;
-    animation: running-cycle 20s linear infinite;
-}
 
-@keyframes running-cycle {
-    0% { left: -160px; }
-    100% { left : 100%; }
-}
 
 @media (max-width: 885px) {
     .img-1{

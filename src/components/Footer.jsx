@@ -46,7 +46,6 @@ function Footer() {
                 <div className='footer-imgs'>
                     <img className='img-1' src={footer} />
                     <div className='footer-line'></div>
-                    <img className='cycle' src={deliveryboy} height="200px" />
                 </div>
 
                 <div className='credit'>
