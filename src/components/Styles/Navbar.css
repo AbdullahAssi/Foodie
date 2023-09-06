@@ -28,7 +28,6 @@ header {
     left: 0;
     right: 0;
     z-index: 10;
-    font-family: 'Oxanium', cursive;
 }
 
 header::after {
@@ -76,6 +75,8 @@ header::after {
     padding: 2em 4em 2em 1.5em;
     text-transform: uppercase;
     text-decoration: none;
+    font-family: "Rubik",sans-serif;
+    font-weight: 450;
 }
 
 

@@ -1,4 +1,4 @@
-import { avatar1, avatar2, avatar3, burger1, burger2, burger3, burger4, burger5, burger6, burger7, drink1, drink2, drink3, drink4, picon1, picon2, picon4, picon5, pizza1, pizza2, pizza3, promo1, promo2, promo3, promo4, promo5, sandwich1, sandwich2 } from "../assets";
+import { avatar1, avatar2, avatar3, blog1, blog2, blog3, burger1, burger2, burger3, burger4, burger5, burger6, burger7, drink1, drink2, drink3, drink4, picon1, picon2, picon4, picon5, pizza1, pizza2, pizza3, promo1, promo2, promo3, promo4, promo5, sandwich1, sandwich2 } from "../assets";
 
 export const navLinks = [
     {
@@ -283,4 +283,30 @@ export const people = [
             'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
     },
 ];
-  
+
+export const blogcard = [
+    {
+        id:1,
+        author : "Abdullah Assi",
+        date: "1-Sep-2023",
+        title: "What Do You Think About Cheese Pizza Recipes?",
+        desc: "Financial experts support or help you to to find out which way you can raise your funds",
+        pic :  blog1
+    },
+    {
+        id:2,
+        author : "Abdullah Assi",
+        date: "1-Sep-2023",
+        title: "What Do You Think About Cheese Pizza Recipes?",
+        desc: "Financial experts support or help you to to find out which way you can raise your funds",
+        pic :  blog2
+    },
+    {
+        id:3,
+        author : "Abdullah Assi",
+        date: "1-Sep-2023",
+        title: "What Do You Think About Cheese Pizza Recipes?",
+        desc: "Financial experts support or help you to to find out which way you can raise your funds",
+        pic :  blog3
+    },
+]

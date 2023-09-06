@@ -5,7 +5,10 @@
 body::-webkit-scrollbar{
     display: none;
 }
-
+::selection{
+  color: #ffffff;
+  background-color: #fbac57;
+}
 
 .button {
     display: inline-block;
@@ -18,7 +21,6 @@ body::-webkit-scrollbar{
     font-size: 19px;
     color: black;
     z-index: 1;
-    outline: 1px solid black;
 }
 
 .button:before {
@@ -35,7 +37,7 @@ body::-webkit-scrollbar{
     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
     z-index: -1;
 }
-   
+
 .button:after {
     content: "";
     position: absolute;
