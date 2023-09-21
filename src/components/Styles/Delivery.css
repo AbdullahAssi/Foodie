@@ -7,11 +7,12 @@
 }
 .delivery-content>h1{
     font-size: 42px;
-    font-family: 'Rubik';
+    font-family: var(--font6);
+    font-weight: 800;
 }
 .delivery-content>p{
     margin-block: 1rem;
-    font-family: 'Roboto';
+    font-family: var(--font8);
     font-size: 16px;
 }
 

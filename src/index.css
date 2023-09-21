@@ -2,6 +2,21 @@
     margin: 0;
     padding: 0;
 }
+:root{
+  --font1: 'Poppins', sans-serif;
+  --font2: 'Roboto', sans-serif;
+  --font3: 'Montserrat', sans-serif;
+  --font5: 'Berkshire Swash', cursive;
+  --font6: 'Bricolage Grotesque', sans-serif;
+  --font7: 'Fredericka the Great', cursive;
+  --font8: 'Playfair Display', serif;
+  --font9: 'Source Sans Pro', sans-serif;
+  --font10: 'Space Grotesk', sans-serif;
+  --font4: 'Marmelad', sans-serif;
+}
+
+
+
 body::-webkit-scrollbar{
     display: none;
 }
@@ -9,6 +24,8 @@ body::-webkit-scrollbar{
   color: #ffffff;
   background-color: #fbac57;
 }
+
+
 
 .button {
     display: inline-block;

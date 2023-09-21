@@ -34,9 +34,17 @@
 }
 .blog-icons>p{
     margin-right: 1rem;
-    color: black;
+    color: rgb(0, 0, 0);
+    font-family: var(--font8);
 }
-
+.blog_title{
+    font-family: var(--font6);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.blog_desc{
+    font-family: var(--font8);
+}
 .blog_button{
     background: none;
     outline: none;

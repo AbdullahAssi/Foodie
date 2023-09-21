@@ -21,8 +21,8 @@ function BlogCards() {
                                 <FaUserAlt />
                                 <p>{card.author}</p>
                             </div>
-                            <h3>{card.title}</h3>
-                            <p>{card.desc}</p>
+                            <h3 className='blog_title'>{card.title}</h3>
+                            <p className='blog_desc'>{card.desc}</p>
                             <button className='blog_button'>Read More <BsArrowRight /></button>
                         </div>
                     </div>

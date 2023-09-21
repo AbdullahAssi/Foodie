@@ -78,7 +78,7 @@ function Shop() {
 
     const ItemsElements = displayedItems.slice(0, visible).map((item) => (
         <div className='item-card' key={item.id}>
-            <div className='item-discount'>-{item.discount}%</div>
+            <div className='item-discount angle'>-{item.discount}%</div>
         <div className='item-pic'>
             <img className="item-pic" src={item.pic} alt="burger" />
         </div>

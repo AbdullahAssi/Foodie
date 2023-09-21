@@ -41,6 +41,7 @@
     padding: 1rem;
     border-radius: 10px;
     position: relative;
+    overflow: hidden;
 }
 .item-pic {
     margin-top: 1rem;
@@ -52,18 +53,35 @@
 }
 .item-discount{
     position: absolute;
-    top: 5;
-    right:0;
-    padding: .5rem;
-    border-radius: 2px;
-    background-color: rgb(244, 47, 37);
+    top: 5px;
+    left: 15px;
+    background: black;
+    font-size: var(--fs-8);
+    font-weight: 500;
+    color:white;
+    padding: 0 2px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    z-index: 1;
+}
+.angle{
+    top: 8px;
+    left: -19px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 5px 30px;
+    z-index: 1;
 }
 .item-info{
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 5px;
-    font-family: Rubik , sans-serif;
+    font-family: var(--font8);
+    letter-spacing: 1px;
 }
 
 .price{
@@ -71,6 +89,7 @@
     padding: .4rem;
     font-size: 20px;
     font-weight: 500;
+    font-family: var(--font1);
 }
 .original-price{
     text-decoration: line-through;

@@ -5,6 +5,7 @@
 .empty-cart{
     padding: 1rem;
     color: rgb(185, 0, 0);
+    font-family: var(--font7);
 }
 .empty-cart-gif{
     display: flex;
@@ -15,6 +16,7 @@
 
 .cart-container{
     padding: 2rem;
+    font-family: var(--font6);
 }
 .product{
     padding-inline: 55px;

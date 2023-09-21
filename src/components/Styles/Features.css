@@ -10,6 +10,7 @@
 .feature-heading{
     color: black;
     font-size: 3rem;
+    font-family: var(--font6);
 }
 .container-img{
     display: flex;
@@ -42,7 +43,7 @@
 }
 .feature-info{
     color: rgb(44, 45, 45);
-    font-family: Roboto, sans-serif;
+    font-family: var(--font8)
 }
 .feature-info-desc{
     margin-block: 1rem;

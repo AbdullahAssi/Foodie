@@ -4,13 +4,13 @@ h6{
     font-size: 2.5rem;
 }
 .hero-heading{
-    font-family: Rubik , sans-serif;
+    font-family: var(--font5);
     color: #f1d6c6;
     font-size: 4rem;
     margin-bottom: 1.2rem;
 }
 .hero-discription{
-    font-family: Roboto, sans-serif;
+    font-family: var(--font6);
     color: white;
     margin-bottom: 1rem;
 }

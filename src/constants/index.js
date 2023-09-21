@@ -18,8 +18,8 @@ export const navLinks = [
     },
     {
         id: "clients",
-        title: "Stores",
-        link : './'
+        title: "Blogs",
+        link : './blogs'
     },
 ];
 
@@ -291,7 +291,8 @@ export const blogcard = [
         date: "1-Sep-2023",
         title: "What Do You Think About Cheese Pizza Recipes?",
         desc: "Financial experts support or help you to to find out which way you can raise your funds",
-        pic :  blog1
+        pic :  blog1,
+        time: "5 min read"
     },
     {
         id:2,
@@ -299,7 +300,8 @@ export const blogcard = [
         date: "1-Sep-2023",
         title: "What Do You Think About Cheese Pizza Recipes?",
         desc: "Financial experts support or help you to to find out which way you can raise your funds",
-        pic :  blog2
+        pic :  blog2,
+        time: "15 min read"
     },
     {
         id:3,
@@ -307,6 +309,7 @@ export const blogcard = [
         date: "1-Sep-2023",
         title: "What Do You Think About Cheese Pizza Recipes?",
         desc: "Financial experts support or help you to to find out which way you can raise your funds",
-        pic :  blog3
+        pic :  blog3,
+        time: "5 min read"
     },
 ]

@@ -13,7 +13,9 @@
     display: flex;
     z-index: 2;
     flex-direction: column;
+    font-family: var(--font6);
     gap: 15px;
+
 }
 .footer-list>h2{
     color: black;

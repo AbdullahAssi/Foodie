@@ -26,6 +26,8 @@
 .testmonial-heading{
     padding-top: 1rem;
     text-align: center;
+    font-family: var(--font6);
+    font-size: 2.5rem;
 }
 .review-container{
     max-width: 500px;
@@ -83,6 +85,7 @@
 }
 .author {
     margin-bottom: 0.25rem;
+    font-family: var(--font6);
 }
 .job {
     margin-bottom: 0.5rem;
@@ -92,6 +95,7 @@
 }
 .info {
     margin-bottom: 0.75rem;
+    font-family: var(--font8);
 }
 .prev-btn,
 .next-btn {
@@ -128,7 +132,7 @@
     flex-direction: column;
     gap: 13px;
     max-width: 550px;
-    font-family: Roboto, sans-serif;
+    font-family: var(--font8);
 }
 
 @media (max-width:475px){

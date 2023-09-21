@@ -1,6 +1,7 @@
 import React from 'react'
 import './Styles/Deals.css'
 import { banner1, banner2, banner3, banner4 } from '../assets'
+import { Link } from 'react-router-dom'
 
 function Deals() {
     return (
@@ -16,7 +17,7 @@ function Deals() {
                         <p className="banner-subtitle">50% Off Now!</p>
                         <h3 className="banner-title">Discount For Delicious Tastes!</h3>
                         <p className="banner-text">Sale off 50% only this week</p>
-                        <button className="button">Order Now</button>
+                        <Link to="/shop"><button className="button">Order Now</button></Link>
                     </div>
 
                 </div>
@@ -31,7 +32,7 @@ function Deals() {
                         <div className="banner-item-content">
                         <h3 className="banner-title">Delicious Pizza</h3>
                         <p className="banner-text">50% off Now</p>
-                        <button className="button">Order Now</button>
+                        <Link to="/shop?catagory=Pizza"><button className="button">Order Now</button></Link>
                     </div>
                 </div>
             </li>
@@ -45,7 +46,7 @@ function Deals() {
                     <div className="banner-item-content">
                         <h3 className="banner-title">American Burgers</h3>
                         <p className="banner-text">50% off Now</p>
-                        <button className="button">Order Now</button>
+                        <Link to="/shop?catagory=Burger"><button className="button">Order Now</button></Link>
                     </div>
 
                 </div>
@@ -60,7 +61,7 @@ function Deals() {
                 <div className="banner-item-content">
                     <h3 className="banner-title">Buzzed Pizza</h3>
                     <p className="banner-text">Sale off 50% only this week</p>
-                    <button className="button">Explore</button>
+                    <Link to="/shop"><button className="button">Order Now</button></Link>
                 </div>
 
                 </div>

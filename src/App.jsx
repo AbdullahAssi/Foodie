@@ -9,6 +9,7 @@ import Test from "./components/test";
 import Login from "./components/Login";
 import { AuthProvider, useAuth } from "./config/Context";
 import { getAuth } from "firebase/auth";
+import Blog from "./components/Blog";
 
 
 
@@ -39,6 +40,10 @@ function App() {
                   <Route
                     path="login"
                     element={<Login />}
+                  />
+                  <Route
+                    path="blogs"
+                    element={<Blog />}
                   />
               </Route>
             </Routes>

@@ -4,7 +4,10 @@
     padding-inline: 10rem;
     padding-block: 2rem;
 }
-
+.promo_heading{
+    font-family: var(--font10);
+    font-size: 900;
+}
 .list{
     display: flex;
     background-color: rgb(249, 246, 240);
@@ -30,8 +33,12 @@
     justify-content: center;
 }
 .promo-title{
+    font-family: var(--font6);
     font-size: 2rem;
     font-weight: 600;
+}
+.promo-text{
+    font-family: var(--font4);
 }
 .promo-pic{
     width: 100%;
