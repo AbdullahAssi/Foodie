@@ -43,7 +43,12 @@ function Shop() {
     const [visible, setVisible] = React.useState(8);
     const [searchParams, setSearchParams] = useSearchParams();
     const [items, setItems] = React.useState([]);
-    console.log(Object.keys(cart).length);
+    // console.log(Object.keys(cart).length);
+    var cartLength = 0;
+    for (var key in cart) {
+        cartLength++;
+    }
+    console.log(cartLength);
 
     if(!cart) {
         console.log("Cart is undefined")
@@ -76,31 +81,36 @@ function Shop() {
         </div>
     );
 
+    // Render the items
     const ItemsElements = displayedItems.slice(0, visible).map((item) => (
         <div className='item-card' key={item.id}>
+            // Show the discount if there is one
             <div className='item-discount angle'>-{item.discount}%</div>
-        <div className='item-pic'>
-            <img className="item-pic" src={item.pic} alt="burger" />
-        </div>
-        <div className='item-info'>
-            <h2 className='name'>{item.Name}</h2>
-            <p className='price'>{item.Price}$ <span className='original-price'>{item.O_price}$</span></p>
-            <button className='cart-button'
-                onClick={() => {
-                    addToCart(item, cart, setCart);
-                    toggleClicked(item);
-                }}
-                >{item.clicked ? (
-                    <>
-                        Added to Cart <BsCartCheckFill />
-                    </>
-                ) : (
-                    <>
-                        Add to Cart <BsFillCartPlusFill />
-                    </>
-                )}
+            // Show the picture
+            <div className='item-pic'>
+                <img className="item-pic" src={item.pic} alt="burger" />
+            </div>
+            // Show the name, price, and original price
+            <div className='item-info'>
+                <h2 className='name'>{item.Name}</h2>
+                <p className='price'>{item.Price}$ <span className='original-price'>{item.O_price}$</span></p>
+                // Show the add to cart button
+                <button className='cart-button'
+                    onClick={() => {
+                        addToCart(item, cart, setCart);
+                        toggleClicked(item);
+                    }}
+                    >{item.clicked ? (
+                        <>
+                            Added to Cart <BsCartCheckFill />
+                        </>
+                    ) : (
+                        <>
+                            Add to Cart <BsFillCartPlusFill />
+                        </>
+                    )}
                 </button>
-        </div>
+            </div>
         </div>
     ));
 

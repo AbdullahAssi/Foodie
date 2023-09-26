@@ -54,19 +54,19 @@
 .item-discount{
     position: absolute;
     top: 5px;
-    left: 15px;
+    left: 20px;
     background: black;
     font-size: var(--fs-8);
     font-weight: 500;
     color:white;
     padding: 0 2px;
-    -webkit-border-radius: 5px;
-            border-radius: 5px;
+    -webkit-border-radius: 1px;
+            border-radius: 1px;
     z-index: 1;
 }
 .angle{
     top: 8px;
-    left: -19px;
+    left: -21px;
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);

@@ -238,9 +238,13 @@ body::-webkit-scrollbar{
     }
   }
 .credit{
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
   text-align: center;
-  padding: 2rem;
-  font-size: 2rem;
+  padding: 1rem;
+  outline: 1px solid black;
+  font-size: 1rem;
   background-color: #f69c3c;
 }
 

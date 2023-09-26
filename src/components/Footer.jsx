@@ -48,9 +48,9 @@ function Footer() {
                     <div className='footer-line'></div>
                 </div>
 
-                <div className='credit'>
+                {/* <div className='credit'>
                 <MdConstruction />  Website Under Construction! <LuConstruction />
-                </div>
+                </div> */}
         </div>
     )
 }
