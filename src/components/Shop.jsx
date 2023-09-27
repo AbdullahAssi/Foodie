@@ -81,20 +81,15 @@ function Shop() {
         </div>
     );
 
-    // Render the items
     const ItemsElements = displayedItems.slice(0, visible).map((item) => (
         <div className='item-card' key={item.id}>
-            // Show the discount if there is one
             <div className='item-discount angle'>-{item.discount}%</div>
-            // Show the picture
             <div className='item-pic'>
                 <img className="item-pic" src={item.pic} alt="burger" />
             </div>
-            // Show the name, price, and original price
             <div className='item-info'>
                 <h2 className='name'>{item.Name}</h2>
                 <p className='price'>{item.Price}$ <span className='original-price'>{item.O_price}$</span></p>
-                // Show the add to cart button
                 <button className='cart-button'
                     onClick={() => {
                         addToCart(item, cart, setCart);
