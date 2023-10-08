@@ -10,6 +10,8 @@ import { MdAlternateEmail } from 'react-icons/md';
 import { BiSolidLockAlt } from 'react-icons/bi';
 import { GoAlertFill,GoVerified } from 'react-icons/go';
 import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineUser } from 'react-icons/ai';
+import Transition from '../components/Transition';
+import { useEffect } from 'react';
 
 const schema = yup.object({
     firstName: yup.string().required(),
@@ -29,10 +31,23 @@ export default function Test() {
     const handleVisibility = () =>{
         setVisible(prevStat => !prevStat)
     }
+    const [showTransition, setShowTransition] = useState(true);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+
+        const timeout = setTimeout(() => {
+        setShowTransition(false);
+        }, 3000);
+        return () => {
+        clearTimeout(timeout);
+        };
+    }, []);
     
     
     return (
         <div className="Form-container">
+             {showTransition && <Transition />}
         <form className="form" onSubmit={handleSubmit(handleSignUp)}>
             <div className="flex-column">
                 <label>First Name </label>

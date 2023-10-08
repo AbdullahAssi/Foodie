@@ -4,6 +4,8 @@ import { food } from '../constants';
 import './Styles/shop.css';
 import { atom, useRecoilState , selector } from 'recoil';
 import { BsFillCartPlusFill, BsCartCheckFill } from 'react-icons/bs'
+import Transition from '../components/Transition';
+import { useEffect, useState } from 'react';
 
 export const CartState = atom({
     key: "CartState",
@@ -56,6 +58,20 @@ function Shop() {
 
     React.useEffect(() => {
         setItems(food);
+        window.scrollTo(0,0);
+    }, []);
+
+    const [showTransition, setShowTransition] = useState(true);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+
+        const timeout = setTimeout(() => {
+        setShowTransition(false);
+        }, 3000);
+        return () => {
+        clearTimeout(timeout);
+        };
     }, []);
 
     const typeFilter = searchParams.get('catagory');
@@ -111,6 +127,7 @@ function Shop() {
 
     return (
         <div className='shop-container'>
+                {showTransition && <Transition />}
             <h1>Explore Our Items</h1>
 
             <nav className='filter-nav'>

@@ -1,10 +1,29 @@
-import React from 'react'
+import React, {useEffect,useState} from 'react'
 import './Styles/Blogs.css'
 import { blogcard } from '../constants'
-
+import Transition from '../components/Transition';
 function Blog() {
+    const [showTransition, setShowTransition] = useState(true);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+
+        // Hide the Transition component after 3 seconds
+        const timeout = setTimeout(() => {
+        setShowTransition(false);
+        }, 3000);
+
+        // Cleanup the timeout when the component unmounts
+        return () => {
+        clearTimeout(timeout);
+        };
+    }, []);
+    React.useEffect(() => {
+        window.scrollTo(0,0);
+    }, []);
     return (
         <div>
+                {showTransition && <Transition />}
             <div className='blog_page_container'>
                 <h1 className='blog_page_heading'>Explore Our Latest Blog</h1>
                 {blogcard.map((card,index)=>(
