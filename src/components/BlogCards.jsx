@@ -4,6 +4,7 @@ import { blogcard } from '../constants'
 import { SlCalender } from 'react-icons/sl';
 import { FaUserAlt } from 'react-icons/fa';
 import { BsArrowRight } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 function BlogCards() {
     return (
@@ -23,7 +24,9 @@ function BlogCards() {
                             </div>
                             <h3 className='blog_title'>{card.title}</h3>
                             <p className='blog_desc'>{card.desc}</p>
-                            <button className='blog_button'>Read More <BsArrowRight /></button>
+                            <Link to='/blogs'>
+                                <button className='blog_button'>Read More <BsArrowRight /></button>
+                            </Link>
                         </div>
                     </div>
                 ))}
