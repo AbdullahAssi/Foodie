@@ -1,1 +1,23 @@
-<h1>An Resturant Web App. Containing all features of Dynamic Cart functionality,Filtering much more.</h1><image>(https://github.com/AbdullahAssi/Foodie/assets/113567773/c2cf0072-52cd-4d5c-bc47-629a3cdb62be)<image>
+# Foodie - Restaurant Web App
+
+Welcome to Foodie, a dynamic restaurant web app with a variety of features to enhance the user experience. .
+
+## Features
+
+- **Dynamic Cart Functionality:** Easily add and remove items from your cart in real-time.
+- **Filtering:** Seamless filtering options to help users find their desired dishes quickly.
+- **Responsive Design:** A user-friendly interface that adapts to different screen sizes and devices.
+And much more
+
+## Stack Used
+- **React** 
+- **React Router v6** 
+- **Recoil & Context API** For StateManagment.
+- **Firebase Authentication**
+- **Framer Motion**
+- **CSS**
+
+![Foodie](./src/assets/Foodie.png)
+
+
+
