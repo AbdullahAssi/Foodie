@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { atom, useRecoilState , selector } from 'recoil';
 import { food } from '../constants';
 import './Styles/shop.css';
-import { atom, useRecoilState , selector } from 'recoil';
 import { BsFillCartPlusFill, BsCartCheckFill } from 'react-icons/bs'
 import Transition from '../components/Transition';
 import { useEffect, useState } from 'react';
