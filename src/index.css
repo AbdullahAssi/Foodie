@@ -262,7 +262,11 @@ body::-webkit-scrollbar{
     }
   }
 .credit{
-  position: sticky;
+  /* position: sticky; */
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font6);
+  align-items: center;
   bottom: 0;
   z-index: 10;
   text-align: center;

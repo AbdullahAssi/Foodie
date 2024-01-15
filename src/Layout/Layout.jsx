@@ -11,7 +11,10 @@ function Layout() {
             <Outlet />
             <Footer />
             <div className='credit'>
-                <MdConstruction />  Website Under Construction! <LuConstruction />
+                Copyright Ⓒ 2023 Foodie. All Rights Reserved.
+                <div>
+                Crafted by M.Abdullah 2023
+                </div>
             </div>
         </div>
     )
